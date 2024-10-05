@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f6f3;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  margin: 20px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box {
+  background-color: #4682b4;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(400%);
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 1.5rem;
+}
+
+.box:hover {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 600px) {
+  .box {
+    width: 100%;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
