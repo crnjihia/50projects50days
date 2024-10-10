@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Netflix Mobile Navigation</title>
+  </head>
+
+  <body>
+    <button class="nav-btn open-btn" aria-label="Open Navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <img
+      src="https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=684&h=456"
+      alt="Netflix Logo"
+      class="logo"
+    />
+
+    <p class="text">Mobile Navigation</p>
+
+    <nav class="nav nav-black" aria-hidden="true">
+      <div class="nav nav-red">
+        <div class="nav nav-white">
+          <button class="nav-btn close-btn" aria-label="Close Navigation">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <img
+            src="https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=684&h=456"
+            alt="Netflix Logo"
+            class="logo"
+          />
+
+          <ul class="list">
+            <li><a href="#" role="menuitem">Teams</a></li>
+            <li><a href="#" role="menuitem">Locations</a></li>
+            <li><a href="#" role="menuitem">Life at Netflix</a></li>
+            <li>
+              <ul class="submenu">
+                <li><a href="#" role="menuitem">Netflix Culture Memo</a></li>
+                <li><a href="#" role="menuitem">Work Life Balance</a></li>
+                <li><a href="#" role="menuitem">Inclusion & Diversity</a></li>
+                <li><a href="#" role="menuitem">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>

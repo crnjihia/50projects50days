@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --main-bg-color: #fafafa;
+  --primary-color: #f9ca24;
+  --secondary-color: #f6e58d;
+  --box-size: 125px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.magic {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+  z-index: 100;
+  transition: 0.2s;
+}
+
+.magic:focus {
+  outline: none;
+}
+
+.magic:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: calc(var(--box-size) * 4);
+  height: calc(var(--box-size) * 4);
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.boxes.big {
+  width: calc(var(--box-size) * 5);
+  height: calc(var(--box-size) * 5);
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box {
+  background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: calc(var(--box-size) * 4);
+  width: var(--box-size);
+  height: var(--box-size);
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.box::after,
+.box::before {
+  content: "";
+  position: absolute;
+}
+
+.box::after {
+  background-color: var(--secondary-color);
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  background-color: var(--primary-color);
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+}
